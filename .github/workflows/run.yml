@@ -9,8 +9,8 @@ jobs:
   run_script:
     runs-on: ubuntu-latest
     env:
-      APPRISE_TOKEN: ${{ secrets.APPRISE_TOKEN }}
-      APPRISE_TARGET: ${{ secrets.APPRISE_TARGET }}
+      APPRISE_TOKEN: ${{ env.APPRISE_TOKEN }}
+      APPRISE_TARGET: ${{ env.APPRISE_TARGET }}
 
     steps:
       - name: Checkout code

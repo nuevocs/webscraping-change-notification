@@ -7,8 +7,8 @@ load_dotenv()
 
 # Create an Apprise instance
 def telegram_notify(title, body):
-    token = os.getenv("APPRISE_TOKEN")
-    target_num = os.getenv("APPRISE_TARGET")
+    token = os.environ.get("APPRISE_TOKEN")
+    target_num = os.environ.get("APPRISE_TARGET")
     target = f"tgram://{token}/{target_num}"
 
     apobj = apprise.Apprise()
