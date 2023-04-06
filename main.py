@@ -80,6 +80,7 @@ if __name__ == "__main__":
                 saved_df = pd.read_csv("current.csv")
                 new_df = create_dataframe(scraping_data(url))
                 check_data(saved_df, new_df)
+                new_df.to_csv("current.csv", index=False)
 
 
     main_func("PROD")
