@@ -24,3 +24,5 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run Python script
         run: python main.py
+      - name: Print environment variable
+        run: echo ${{ vars.APP_MODE }}
