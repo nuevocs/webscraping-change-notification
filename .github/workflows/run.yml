@@ -11,6 +11,7 @@ jobs:
     env:
       APPRISE_TOKEN: ${{ secrets.APPRISE_TOKEN }}
       APPRISE_TARGET: ${{ secrets.APPRISE_TARGET }}
+      APP_MODE: ${{ vars.APP_MODE }}
 
     steps:
       - name: Checkout code

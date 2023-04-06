@@ -3,6 +3,7 @@ from selectolax.parser import HTMLParser
 import pandas as pd
 import random
 import time
+import os
 from apprise_func import telegram_notify
 
 url = "https://www.tojitsu-kenpo.or.jp/asp/news_all/newstitle.asp"
@@ -68,8 +69,8 @@ def _test_wrong(df, col_name):
 
 if __name__ == "__main__":
 
-    def main_func(mode):
-        match mode:
+    def main_func():
+        match os.environ.get("APP_MODE"):
             case "DEV":
                 saved_df = create_dataframe(scraping_data(url))
                 saved_df.to_csv("current.csv", index=False)
@@ -83,4 +84,4 @@ if __name__ == "__main__":
                 new_df.to_csv("current.csv", index=False)
 
 
-    main_func("DEV")
+    main_func()
