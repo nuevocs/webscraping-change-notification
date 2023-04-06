@@ -1,6 +1,8 @@
 import httpx
 from selectolax.parser import HTMLParser
 import pandas as pd
+import random
+import time
 from apprise_func import telegram_notify
 
 url = "https://www.tojitsu-kenpo.or.jp/asp/news_all/newstitle.asp"
@@ -34,6 +36,7 @@ def scraping_data(url):
 # print(scraping_data(url))
 
 def get_body(url) -> str:
+    time.sleep(random.randint(2, 6))
     character_limit: int = 300
     tree = scraping_data(url)
     body = "#newsArticleBody > p"
