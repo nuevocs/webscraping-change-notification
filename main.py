@@ -83,4 +83,4 @@ if __name__ == "__main__":
                 new_df.to_csv("current.csv", index=False)
 
 
-    main_func("PROD")
+    main_func("DEV")
