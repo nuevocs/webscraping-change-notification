@@ -2,11 +2,7 @@ name: Python Script Workflow
 on:
   workflow_dispatch:
   schedule:
-<<<<<<< HEAD
-    - cron: "0 7,14,17 * * 2" # every tuesday at 7:00am and 2:00pm and 5:00pm
-=======
     - cron: "0 15 * * *" # every day at 3pm
->>>>>>> 9556f10dc4db6f0f38874d0795a95c730b53f8bd
   push:
     branches: [main]
 jobs:
