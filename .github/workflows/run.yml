@@ -2,7 +2,7 @@ name: Python Script Workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 15 * * *" # every day at 3pm
+    - cron: "0 15 * * *" # every day at 3pm JST
   push:
     branches: [main]
 jobs:
